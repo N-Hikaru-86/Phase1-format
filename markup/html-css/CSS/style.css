@@ -23,8 +23,8 @@ a{
 
 body{
     color:#555;
-    margin:0;
-    line-height:1.6;
+    margin: 0;
+    line-height: 1.67;
 }
 
 /* 共通 */
@@ -35,20 +35,75 @@ html {
 
 body {
     font-family: "Arial";
+    color: #191919;
 }
 
-.logo {
+.inner {
+    padding: 0 130px 90px;
+}
+
+.title {
     font-weight: bold;
     font-size: 1.8rem;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title::before,
+.title::after {
+    content: "";
+    display: block;
+    width: 30px;
+    border-bottom: 1px solid;
+}
+
+.title::before {
+    margin-right: 19.5px;
+}
+
+.title::after {
+    margin-left: 19.5px;
+}
+
+.btn {
+    height: 50px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    color:#fff;
+    background: linear-gradient(to right,#06BEB6,#1A719A,#283C86);
+    box-shadow: 0 5px 0 #070707;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 5px 0 #07070729;
+}
+
+.btn i {
+    margin-right: 4.91px;
 }
 
 /* header */
 
 header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    color: #fff;
+    position: absolute;
+    z-index: 10;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.8rem;
 }
 
 .header-nav ul {
@@ -61,5 +116,223 @@ header {
 }
 
 .header-nav li:last-child {
-        margin-right: 0;
-    }
+    margin-right: 0;
+}
+
+/* main要素 */
+
+/* first-view地点 */
+#first-view {
+    height: 769px;
+    background-image: url(../img/bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+.view-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.catch-copy {
+    font-size: 2.7rem;
+    font-weight: bold;
+    margin-bottom: 150px;
+}
+
+.catch-copy::after {
+    display: block;
+    content: "";
+    margin: 0 auto;
+    height: 1px;
+    width: 48.5%;
+    background-color: #fff;
+    margin-top: 20.5px;
+}
+
+/* about要素 */
+
+#about {
+    background-color: #F8F8F8;
+    height: 930px;
+}
+
+#about span {
+    font-style: italic;
+    margin-left: 0.6rem
+}
+
+#about .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-content {
+    background-color: #fff;
+    width: 30%;
+    max-width: 300px;
+    height: 312px;
+    text-align: center;
+    padding: 35px 50px;
+
+}
+
+.about-content:nth-child(4),
+.about-content:nth-child(5),
+.about-content:nth-child(6) {
+    margin-top: 47px;
+}
+
+.about-title {
+    font-family: "Hirakino Kaku Gothic";
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    height: 21px;
+}
+.about-img {
+    width: 122px;
+    height: 122px;
+    margin-bottom: 25px;
+}
+
+.about-text {
+    font-family: "Hirakino Kaku Gothic";
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* news要素 */
+
+#news {
+    background-image: url(../img/bg2.png);
+    background-size: cover;
+    color: #fff;
+}
+
+#news .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-content {
+    width: 30.4%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-text {
+    background-color: #fff;
+    color: #191919;
+    padding: 20px 19px 49px;
+}
+
+.news-date {
+    font-weight: bold;
+    font-size: 1.0rem;
+    margin-bottom: 8px;
+}
+
+.news-title {
+    font-weight: bold;
+    font-weight: 1.4rem;
+    margin-bottom: 20px;
+    font-family: "Hirakino Kaku Gothic";
+}
+
+.news-main {
+    font-size: 1.2rem;
+    font-family: "Hirakino Kaku Gothic";
+}
+
+
+/* entry要素 */
+#entry {
+    height: 477px;
+    padding: 175px 0;
+    width: 100%;
+}
+
+.entry-wrap {
+    margin: 0 auto;
+    height: 132px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.entry-title {
+    text-align: center;
+    font-family: "Hirakino Kaku Gothic";
+    font-size: 1.8rem;
+}
+
+/* contact要素 */
+
+#contact {
+    background-image: url(../img/bg3.png);
+    background-size: cover;
+    color: #fff;
+}
+
+#contact .inner {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    width: 600px;
+    margin: 0 auto;
+}
+
+#contact p {
+    font-family: "Hiragino Kaku Gothic";
+    font-size: 1.5rem;
+}
+
+.red {
+    color: rgb(255, 0, 0);
+}
+
+.alert {
+    margin-bottom: 25px;
+}
+
+.contact-box {
+    margin-bottom: 33px;
+}
+
+.contact-t {
+    margin-bottom: 10px;
+}
+
+input,select,textarea {
+    width: 100%;
+    border-radius: 7px;
+}
+
+
+/* footer要素 */
+footer {
+    height: 50px;
+    background-color: #191919;
+}
+
+.footer-small {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial Rounded MT Bold';
+    font-size: 1.2rem;
+    color: #fff;
+}
