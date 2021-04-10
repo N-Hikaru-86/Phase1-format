@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
+    <script src="https://kit.fontawesome.com/c1b221deca.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/style.css">
     <title>Document</title>
 </head>
@@ -13,7 +14,7 @@
 <body>
     <!-- header -->
     <header>
-        <div class="logo">CodeVillage</div>
+        <h1 class="logo">CodeVillage</h1>
         <!-- ナビゲーション -->
         <nav class="header-nav">
             <ul>
@@ -29,33 +30,125 @@
     <main>
         <!-- first-view -->
         <section id="first-view">
-
+            <div class="view-box">
+                <h2 class="catch-copy">A-life-changing</h2>
+                <button class="btn btn-f"><i class="fas fa-sign-in-alt"></i>ENTRY</button>
+            </div>
         </section>
 
         <!-- about -->
         <section id="about">
+            <h2 class="title">About <span> Us</span></h2>
+            <div class="inner">
+                <div class="about-content">
+                    <h3 class="about-title">時間無制限</h3>
+                    <img class="about-img" src="img/icon1.png" alt="">
+                    <p class="about-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </div>
+                <div class="about-content">
+                    <h3 class="about-title">成長率No.1</h3>
+                    <img class="about-img" src="img/icon2.png" alt="">
+                    <p class="about-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </div>
+                <div class="about-content">
+                    <h3 class="about-title">満足度No.1</h3>
+                    <img class="about-img" src="img/icon3.png" alt="">
+                    <p class="about-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </div>
+                <div class="about-content">
+                    <h3 class="about-title">スマホで学べる</h3>
+                    <img class="about-img" src="img/icon4.png" alt="">
+                    <p class="about-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </div>
+                <div class="about-content">
+                    <h3 class="about-title">トレーナー制度</h3>
+                    <img class="about-img" src="img/icon5.png" alt="">
+                    <p class="about-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </div>
+                <div class="about-content">
+                    <h3 class="about-title">質問し放題</h3>
+                    <img class="about-img" src="img/icon6.png" alt="">
+                    <p class="about-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </div>
+
+            </div>
 
         </section>
 
         <!-- news -->
         <section id="news">
-
+            <h2 class="title">News</h2>
+            <div class="inner">
+                <div class="news-content">
+                    <img src="img/news1.jpg" alt="">
+                    <div class="news-text">
+                        <p class="news-date">2019/7/21</p>
+                        <h3 class="news-title">タイトルが入ります。タイトルが入ります。</h3>
+                        <p class="news-main">
+                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    </div>
+                </div>
+                <div class="news-content">
+                    <img src="img/news2.jpg" alt="">
+                    <div class="news-text">
+                        <p class="news-date">2019/7/21</p>
+                        <h3 class="news-title">タイトルが入ります。タイトルが入ります。</h3>
+                        <p class="news-main">
+                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    </div>
+                </div>
+                <div class="news-content">
+                    <img src="img/news3.jpg" alt="">
+                    <div class="news-text">
+                        <p class="news-date">2019/7/21</p>
+                        <h3 class="news-title">タイトルが入ります。タイトルが入ります。</h3>
+                        <p class="news-main">
+                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- entry -->
         <section id="entry">
-
+            <div class="entry-wrap">
+                <p class="entry-title">"今すぐ人生を変える"</p>
+                <button class="btn btn-s"><i class="fas fa-sign-in-alt"></i>ENTRY</button>
+            </div>
         </section>
 
         <!-- contact -->
         <section id="contact">
-
+            <h2 class="title">Contact</h2>
+            <div class="inner">
+                <p class="alert"><span class="red">*</span>が付いたフィールドは必須項目です。</p>
+                <div class="contact-box">
+                    <p class="contact-t">名前<span class="red">*</span></p>
+                    <input type="text" name="contact-name" placeholder="名前をご記入ください">
+                </div>
+                <div class="contact-box">
+                    <p class="contact-t">メールアドレス<span class="red">*</span></p>
+                    <input type="email" name="contact-mail" placeholder="メールアドレスをご記入ください">
+                </div>
+                <div class="contact-box">
+                    <p class="contact-t" placeholder="お問い合わせ内容を選択">お問い合わせ内容<span class="red">*</span></p>
+                    <select name="contact-select" class="select-box">
+                        <option value="service">サービスに関するお問い合わせ</option>
+                        <option value="recruit">採用に関するお問い合わせ</option>
+                        <option value="other">その他のお問い合わせ</option>
+                    </select>
+                </div>
+                <div class="contact-box">
+                    <p class="contact-t">お問い合わせ詳細<span class="red">*</span></p>
+                    <textarea name="name" placeholder="お問い合わせ内容の詳細をご記入ください"></textarea>
+                </div>
+            </div>
         </section>
 
     </main>
 
     <footer>
-
+        <small class="footer-small">@2017-2021 MOSQIIIT inc.</small>
     </footer>
 </body>
 
