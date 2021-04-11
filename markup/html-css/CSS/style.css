@@ -301,6 +301,12 @@ header {
 
 .red {
     color: rgb(255, 0, 0);
+    margin-left: 8px;
+}
+
+.red:first-child {
+    margin-left: 0;
+    margin-right: 8px;
 }
 
 .alert {
@@ -311,6 +317,10 @@ header {
     margin-bottom: 33px;
 }
 
+.contact-box:last-child {
+    margin-bottom: 0;
+}
+
 .contact-t {
     margin-bottom: 10px;
 }
@@ -318,7 +328,30 @@ header {
 input,select,textarea {
     width: 100%;
     border-radius: 7px;
+    font-family: "Hirakino Kaku Gothic";
+    font-size: 1.5rem;
+    padding-left: 15px;
 }
+
+input,select {
+    height: 55px;
+}
+
+textarea {
+    height: 185px;
+    padding-top: 20px;
+}
+select {
+    appearance: none;
+    background: url(../img/arrow.png);
+    background-size: 15px 15px;
+    background-position-x: 94.5%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    line-height: 1.73;
+    background-color: #fff;
+}
+
 
 
 /* footer要素 */
