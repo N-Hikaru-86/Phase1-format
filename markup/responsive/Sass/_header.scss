@@ -1,0 +1,45 @@
+header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+}
+
+.hd-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+@include tab {
+    .ham {
+        display: flex;
+        flex-direction: column;
+        width: 25px;
+        height: 15.5px;
+        span {
+            border-top: 1px solid;
+            margin-bottom: 7.5px;
+        }
+    }
+}
+
+.pc-navmenu {
+    width: 383px;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li {
+        font-size: 1.5rem;
+    }
+
+    @include tab {
+        display: none;
+    }
+}

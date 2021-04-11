@@ -1,0 +1,96 @@
+// 変数
+
+
+// Mixin
+
+@mixin pc {
+    @media screen and (min-width:1025px) {
+        @content
+    }
+}
+
+@mixin tab {
+    @media screen and (max-width:1024px) {
+        @content
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width:599px) {
+        @content
+    }
+}
+
+
+
+// 共通
+
+html {
+    font-size: 62.5%;//10px
+}
+
+body {
+    font-family: 'Arial';
+    line-height: 1.67;
+    color: #191919;
+}
+
+.inner {
+    padding: 90px 0;
+    width: 78%;
+    margin: 0 auto;
+
+    @include tab {
+        width: 83.7%;
+    }
+
+    @include sp {
+        padding: 50px 0;
+        width: 89.3%;
+    }
+}
+
+.title {
+    font-size: 1.8rem;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    &--b{
+        font-weight: bold;
+    }
+
+    &::before,
+    &::after {
+        display: block;
+        content: "";
+        border-top: 1px solid;
+        width: 30px;
+    }
+
+    &::before {
+        margin-right: 19.5px;
+    }
+
+    &::after {
+        margin-left: 19.5px;
+    }
+}
+
+.button {
+    height: 50px;
+    border: none;
+    width: 100%;
+    color: #fff;
+    border-radius: 5px;
+    background: linear-gradient(90deg,#06BEB6,#1A719A,#283C86);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 5px 0 #07070729;
+    box-shadow: 0 5px 0 #070707;
+
+    i {
+        margin-right: 4.91px;
+    }
+}

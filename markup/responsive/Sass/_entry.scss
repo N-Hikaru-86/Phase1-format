@@ -1,0 +1,30 @@
+#entry {
+    height: 477px;
+
+    @include tab {
+        height: 485px;
+    }
+
+    @include sp {
+        height: 500px;
+    }
+}
+
+.entry-wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry-copy {
+    font-size: 1.8rem;
+    font-family: "Hirakino Kaku Gothic";
+    margin-bottom: 55px;
+}
+
+.entry-btn {
+    width: 320px;
+}
