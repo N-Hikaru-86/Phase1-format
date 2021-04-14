@@ -1,0 +1,25 @@
+header {
+    padding: 68px 0; 
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.store-name {
+    font-size: 3.8rem;
+    margin-right: 20px;
+}
+
+.header-link {
+    width: 392px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li {
+        font-size: 1.8rem;
+
+        color: #707070;
+    }
+}

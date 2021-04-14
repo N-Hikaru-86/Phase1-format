@@ -1,12 +1,23 @@
-/* 追加チャレンジ問題 */
 
-/* body {
+.game {
+  width: 500px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.last-btn {
-  display: flex;
-  margin: 0 auto;
-} */
+.number {
+  margin: 20px 0px;
+}
 
-/* 追加チャレンジ問題 ここまで */
+.button {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 35%;
+}
+
+#number {
+  margin: 0 auto;
+  margin-top: 5px;
+}

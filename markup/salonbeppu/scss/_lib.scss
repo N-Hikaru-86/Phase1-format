@@ -1,0 +1,37 @@
+// Mixin
+
+@mixin pc {
+    @media screen and(min-width:1025px) {
+        @content        
+    }
+}
+
+@mixin tab {
+    @media screen and(max-width:1024px) {
+        @content        
+    }
+}
+
+@mixin sp {
+    @media screen and(max-width:599px) {
+        @content        
+    }
+}
+
+// 共通
+
+html {
+    font-size: 62.5% //10px
+}
+
+body {
+    font-family: "Roboto Mono for Powerline";
+    line-height: 1.69;
+}
+
+.inner {
+    padding-top: 260px;
+    padding-bottom: 70px;
+    width: 80.3%;
+    margin: 0 auto;
+}
