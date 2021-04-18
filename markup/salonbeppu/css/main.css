@@ -112,8 +112,25 @@ input, select {
 }
 
 /*# sourceMappingURL=reset.css.map */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto Mono for Powerline";
+  line-height: 1.69;
+  font-size: 1.6rem;
+}
+
+.inner {
+  padding-top: 260px;
+  padding-bottom: 70px;
+  width: 80.3%;
+  margin: 0 auto;
+}
+
 header {
-  padding: 68px 0;
+  padding: 68px 77px;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -134,6 +151,15 @@ header {
 .header-link li {
   font-size: 1.8rem;
   color: #707070;
+}
+.header-link li:hover {
+  color: #000;
+}
+.header-link li:hover li::after {
+  display: block;
+  content: "";
+  height: 18.5px;
+  border-bottom: 1px solid #000;
 }
 
 /*# sourceMappingURL=main.css.map */
