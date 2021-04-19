@@ -1,47 +1,39 @@
 const start = document.getElementById("startTimer");
 const confirm = document.getElementById("confirmTime");
 
-let swi = 0;
-var nowtime;
-var pas_dt;
-var past;
-var pas_t;
-var pastime;
-
-start.addEventListener('click', function () {
-    pastime = new Date();
-    swi = 1;
-    console.log(pastime);
-    pas_dt = setInterval(function () {
-        pasdate = new Date();
-        console.log(pasdate);
-    }, 1000);
-    timeout();
-})
-
 function timeout() {
     setTimeout(function () {
-        clearInterval(pas_dt);
+        clearInterval(timekeeper);
         alert("タイムオーバーだぞ、笑えよ");
+        time = 0;
         location.reload();
-    }, 40000);
+    }, 40000)
+}
+
+let time = 0;
+let swi = 0;
+
+start.addEventListener('click', function () {
+    timekeeper();
+    timeout();
+    swi = 1;
+})
+
+function timekeeper() {
+    setInterval(function () {
+        time += 1;
+    }, 1000)
 }
 
 confirm.addEventListener('click', function () {
+    clearInterval(timekeeper);
     clearTimeout(timeout);
-    clearInterval(pas_dt);
     if (swi !== 1) {
         alert("スタートを押せください");
         return;
     }
-    now_d = new Date();
-    console.log(now_d)
-    let sec_t = Math.floor(now_d.getTime() - pastime.getTime()) / 1000;
-    console.log(sec_t)
-    result(sec_t)
-    sec_t = 0;
-    past = 0;
-    nowtime = 0;
+    result(time);
+    time = 0;
 })
 
 function result(t) {
@@ -56,3 +48,4 @@ function result(t) {
         location.reload();
     }
 }
+
