@@ -3,7 +3,6 @@ const resetBtn = document.getElementById("resetBtn");
 
 
 let showImg = document.getElementById("showImg");
-let showImg_value = showImg.nodeValue;
 
 
 
