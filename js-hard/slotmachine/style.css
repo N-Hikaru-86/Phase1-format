@@ -16,6 +16,7 @@ p {
 /*  チャレンジ問題 */
 
 .slot-wrap {
+  margin:  0 auto;
   height: 160px;
   width: 150px;
 }
