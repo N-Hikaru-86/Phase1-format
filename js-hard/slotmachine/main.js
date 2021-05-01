@@ -3,6 +3,13 @@ const startTimer = document.getElementById("startTimer");
 let nowtime1 = document.getElementById("nowTime");
 let nowtime2 = document.getElementById("nowTime2");
 let nowtime3 = document.getElementById("nowTime3");
+let nowtime4 = document.getElementById("nowTime4");
+let nowtime5 = document.getElementById("nowTime5");
+let nowtime6 = document.getElementById("nowTime6");
+let nowtime7 = document.getElementById("nowTime7");
+let nowtime8 = document.getElementById("nowTime8");
+let nowtime9 = document.getElementById("nowTime9");
+
 
 let timer1;
 let timer2;
@@ -13,12 +20,19 @@ let m = null;
 nowtime1.textContent = 0;
 nowtime2.textContent = 0;
 nowtime3.textContent = 0;
+nowtime4.textContent = 9;
+nowtime5.textContent = 9;
+nowtime6.textContent = 9;
+nowtime7.textContent = 1;
+nowtime8.textContent = 1;
+nowtime9.textContent = 1;
 
 
 startTimer.addEventListener('click', event => {
     i = 0;
     j = 0;
     m = 0;
+    let up, down;
     clearInterval(timer1);
     clearInterval(timer2);
     clearInterval(timer3);
@@ -29,22 +43,57 @@ startTimer.addEventListener('click', event => {
             i = 0;
         }
         nowtime1.textContent = i;
+        up = i - 1;
+        down = i + 1;
+        if (up === -1) {
+            up = 9;
+        }
+        nowtime4.textContent = up;
+        if (down > 9) {
+            down = 0;
+        }
+        nowtime7.textContent = down;
+
     }, 100)
     timer2 = setInterval(function () {
         if (j !== 9) {
             j += 1;
+        } else if (j === -1) {
+            j = 9;
         } else {
             j = 0;
         }
         nowtime2.textContent = j;
+        up = j - 1;
+        down = j + 1;
+        if (up === -1) {
+            up = 9;
+        }
+        nowtime5.textContent = up;
+        if (down > 9) {
+            down = 0;
+        }
+        nowtime8.textContent = down;
     }, 100)
     timer3 = setInterval(function () {
         if (m !== 9) {
             m += 1;
+        } else if (m === -1) {
+            m = 9;
         } else {
             m = 0;
         }
         nowtime3.textContent = m;
+        up = m - 1;
+        down = m + 1;
+        if (up === -1) {
+            up = 9;
+        }
+        nowtime6.textContent = up;
+        if (down > 9) {
+            down = 0;
+        }
+        nowtime9.textContent = down;
     }, 100)
 
 })
@@ -100,6 +149,12 @@ async function append() {
     nowtime1.textContent = 0;
     nowtime2.textContent = 0;
     nowtime3.textContent = 0;
+    nowtime4.textContent = 9;
+    nowtime5.textContent = 9;
+    nowtime6.textContent = 9;
+    nowtime7.textContent = 1;
+    nowtime8.textContent = 1;
+    nowtime9.textContent = 1;
     i = 0;
     j = 0;
     m = 0;
