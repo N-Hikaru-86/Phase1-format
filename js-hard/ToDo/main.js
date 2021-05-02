@@ -6,7 +6,7 @@ const todo_app = document.getElementById("todo-app");
 console.log(addArea.length)
 
 addBtn.addEventListener("click", event => {
-    if (addArea.length === undefined) {
+    if (addArea.value === '') {
         alert("空です！");
         return 0;
     }
