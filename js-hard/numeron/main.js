@@ -33,6 +33,7 @@ numCheck.addEventListener('click', function () {
     if (answNum === "") {
         alert("何か入力してください");
         answerNum.value = "";
+        turn -= 1;
         return 0;
     }
     let ansArr = answNum.split('');
@@ -41,10 +42,12 @@ numCheck.addEventListener('click', function () {
     if (duplicate.size !== ansArray.length) {
         alert("同じ数字を入れないでください！");
         answerNum.value = "";
+        turn -= 1;
         return 0;
     } else if (ansArray.length >= 4 || ansArray.length < 3) {
         alert("3文字にしてください");
         answerNum.value = "";
+        turn -= 1;
         return 0;
     }
     for (let q = 0; q < 3; q++) {
@@ -61,7 +64,7 @@ numCheck.addEventListener('click', function () {
     if (eat === 3) {
         alert("正解です！");
         turnResult(turn);
-        reset(answNum, remain);
+        reset();
 
     } else {
         answerNum.value = "";
@@ -70,21 +73,25 @@ numCheck.addEventListener('click', function () {
         console.log(remain)
         remainTurn.textContent = `あと残り${remain}回です`
         alert(`${eat} EAT   ${bite} BITE`);
-        if (remain <= 0 && turn >= 10) {
-            reset(answNum, remain);
+        if (remain <= 0) {
+            remainTurn.textContent = `終了です。答えは${rand.join("")}でした。`
+            setTimeout(() => {
+                reset();
+            }, 1000);
         } else if (remain <= 3) {
             remainTurn.style.color = "red";
         }
     }
 })
 
+
 function turnResult(m) {
-    if (t < 3) {
-        alert(`${t}回目でクリア\n秀。何があった。`);
-    } else if (t < 5) {
-        alert(`${t}回目でクリア\n優。`);
-    } else if (t <= 10) {
-        alert(`${t}回目でクリア\n並。規定通り。`)
+    if (m < 3) {
+        alert(`${m}回目でクリア\n秀。何があった。`);
+    } else if (m < 5) {
+        alert(`${m}回目でクリア\n優。`);
+    } else if (m <= 10) {
+        alert(`${m}回目でクリア\n並。規定通り。`)
     }
 
     // if (t < 6) {
@@ -99,10 +106,7 @@ function turnResult(m) {
     // }
 }
 
-function reset(a, r) {
-    if (r <= 0) {
-        alert(`終了です。答えは${a}でした。`);
-    }
+function reset() {
     const con = confirm("またやりますか？");
     if (con === true) {
         remain = 10;
