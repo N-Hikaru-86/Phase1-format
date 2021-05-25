@@ -1,4 +1,17 @@
 const cardWrap = document.getElementById("panel");
+const nextPlayer = document.getElementById("nextPlayer");
+let player1Point = document.getElementById("player1Point");
+let player2Point = document.getElementById("player2Point");
+
+let point1 = 0;
+player1Point.textContent = `player1:${point1}`;
+
+let point2 = 0;
+player2Point.textContent = `player2:${point2}`;
+
+let turnCounter = 1;
+nextPlayer.innerHTML = "次はPlayer1の番です。"
+
 
 const array = [0, 1, 2, 3, 4, 5, 6, 7];
 const number = [1, 1, 2, 2, 3, 3, 4, 4];
@@ -15,289 +28,396 @@ for (let i = 0; i < 8; i++) {
     }
 }
 
-const btn1 = document.createElement("button");
-cardWrap.appendChild(btn1);
-btn1.classList.add("back", "card");
-
-const btn2 = document.createElement("button");
-cardWrap.appendChild(btn2);
-btn2.classList.add("back", "card");
-
-const btn3 = document.createElement("button");
-cardWrap.appendChild(btn3);
-btn3.classList.add("back", "card");
-
-const btn4 = document.createElement("button");
-cardWrap.appendChild(btn4);
-btn4.classList.add("back", "card");
-
-const btn5 = document.createElement("button");
-cardWrap.appendChild(btn5);
-btn5.classList.add("back", "card");
-
-const btn6 = document.createElement("button");
-cardWrap.appendChild(btn6);
-btn6.classList.add("back", "card");
-
-const btn7 = document.createElement("button");
-cardWrap.appendChild(btn7);
-btn7.classList.add("back", "card");
-
-const btn8 = document.createElement("button");
-cardWrap.appendChild(btn8);
-btn8.classList.add("back", "card");
-
+const varArray = [1, 2, 3, 4, 5, 6, 7, 8];
+let card;
 let count = 0;
-let num1 = "";
-let num2 = "";
-let arrayNum1 = "";
-let arrayNum2 = "";
+let num1 = 0;
+let num2 = 0;
+let arrayNum1 = 0;
+let arrayNum2 = 0;
+let numberP;
 
-btn1.addEventListener("click", function () {
-    btn1.innerHTML = random[0];
-    btn1.className = "card";
-    counter();
-    if (num1 === "") {
+for (let i in varArray) {
+    this["card" + varArray[i]] = document.createElement("div");
+    cardWrap.appendChild(this["card" + varArray[i]]);
+    this["numberP" + varArray[i]] = document.createElement("p");
+    this["card" + varArray[i]].appendChild(this["numberP" + varArray[i]])
+    this["card" + varArray[i]].classList.add("back", "card");
+    this["card" + varArray[i]].disabled = false;
+}
+
+
+card1.addEventListener("click", function () {
+    numberP1.textContent = random[0];
+    card1.className = "card";
+    numberP1.classList.add("cardText");
+    card1.disabled = true;
+    numberP1.disabled = true;
+    if (num1 === 0) {
         num1 = random[0];
         arrayNum1 = 0;
     } else {
         num2 = random[0];
         arrayNum2 = 0;
     }
+    counter();
 })
 
-btn2.addEventListener("click", function () {
-    btn2.innerHTML = random[1];
-    btn2.className = "card";
-    counter();
-    if (num1 === "") {
+card2.addEventListener("click", function () {
+    numberP2.textContent = random[1];
+    card2.className = "card";
+    numberP2.classList.add("cardText");
+    card2.disabled = true;
+    numberP2.disabled = true;
+    if (num1 === 0) {
         num1 = random[1];
         arrayNum1 = 1;
     } else {
         num2 = random[1];
         arrayNum2 = 1;
     }
+    counter();
 })
 
-btn3.addEventListener("click", function () {
-    btn3.innerHTML = random[2];
-    btn3.className = "card";
-    counter();
-    if (num1 === "") {
+card3.addEventListener("click", function () {
+    numberP3.textContent = random[2];
+    card3.className = "card";
+    numberP3.classList.add("cardText");
+    card3.disabled = true;
+    numberP3.disabled = true;
+    if (num1 === 0) {
         num1 = random[2];
         arrayNum1 = 2;
     } else {
         num2 = random[2];
         arrayNum2 = 2;
     }
+    counter();
 })
 
-btn4.addEventListener("click", function () {
-    btn4.innerHTML = random[3];
-    btn4.className = "card";
-    counter();
-    if (num1 === "") {
+card4.addEventListener("click", function () {
+    numberP4.textContent = random[3];
+    card4.className = "card";
+    numberP4.classList.add("cardText");
+    card4.disabled = true;
+    numberP4.disabled = true;
+    if (num1 === 0) {
         num1 = random[3];
         arrayNum1 = 3;
     } else {
         num2 = random[3];
         arrayNum2 = 3;
     }
-})
-
-btn5.addEventListener("click", function () {
-    btn5.innerHTML = random[4];
-    btn5.className = "card";
     counter();
-    if (num1 === "") {
+})
+card5.addEventListener("click", function () {
+    numberP5.textContent = random[4];
+    card5.className = "card";
+    numberP5.classList.add("cardText");
+    card5.disabled = true;
+    numberP5.disabled = true;
+    if (num1 === 0) {
         num1 = random[4];
         arrayNum1 = 4;
     } else {
         num2 = random[4];
         arrayNum2 = 4;
     }
+    counter();
 })
 
-btn6.addEventListener("click", function () {
-    btn6.innerHTML = random[5];
-    btn6.className = "card";
-    counter();
-    if (num1 === "") {
+card6.addEventListener("click", function () {
+    numberP6.textContent = random[5];
+    card6.className = "card";
+    numberP6.classList.add("cardText");
+    card6.disabled = true;
+    numberP6.disabled = true;
+    if (num1 === 0) {
         num1 = random[5];
         arrayNum1 = 5;
     } else {
         num2 = random[5];
         arrayNum2 = 5;
     }
+    counter();
 })
 
-btn7.addEventListener("click", function () {
-    btn7.innerHTML = random[6];
-    btn7.className = "card";
-    counter();
-    if (num1 === "") {
+card7.addEventListener("click", function () {
+    numberP7.textContent = random[6];
+    card7.className = "card";
+    numberP7.classList.add("cardText");
+    card7.disabled = true;
+    numberP7.disabled = true;
+    if (num1 === 0) {
         num1 = random[6];
         arrayNum1 = 6;
     } else {
         num2 = random[6];
         arrayNum2 = 6;
     }
+
+    counter();
 })
 
-btn8.addEventListener("click", function () {
-    btn8.innerHTML = random[7];
-    btn8.className = "card";
-    counter();
-    if (num1 === "") {
+card8.addEventListener("click", function () {
+    numberP8.textContent = random[7];
+    card8.className = "card";
+    numberP8.classList.add("cardText");
+    card8.disabled = true;
+    numberP8.disabled = true;
+    if (num1 === 0) {
         num1 = random[7];
         arrayNum1 = 7;
     } else {
         num2 = random[7];
         arrayNum2 = 7;
     }
+    counter();
 })
 
+
+let timer;
+let newArray;
+let disableT = [];
+
 function counter() {
-    count += 1
-    console.log(num1);
-    console.log(num2);
-    console.log(arrayNum1);
-    console.log(arrayNum2);
-    if (count === 2) {
-        const timer = setTimeout(function () {
+    if (arrayNum1 !== arrayNum2) {
+        count += 1;
+        if (num1 !== null || num2 !== null) {
             console.log(count);
-            result();
-        }, 500)
+            if (count === 2) {
+                if (num1 !== 0 && num2 !== 0) {
+                    timer = setTimeout(function () {
+                        result();
+                    }, 500)
+                } else {
+                    count = 0;
+                    return;
+                }
+            }
+        } else {
+            num1 = 0;
+            num2 = 0;
+            count = 0;
+        }
+    } else {
+        num2 = 0;
     }
 }
 
 function result() {
     if (num1 === num2) {
         switch (arrayNum1) {
-            case 0: btn1.classList.add("finish");
-                btn1.innerHTML = "";
+            case 0:
+                card1.classList.add("finish");
+                numberP1.classList.add("finish");
+                numberP1.innerHTML = "";
+                card1.style.opacity = "0";
+                random[0] = null;
                 break;
-            case 1: btn2.classList.add("finish");
-                btn2.innerHTML = "";
+            case 1:
+                card2.classList.add("finish");
+                numberP2.classList.add("finish");
+                numberP2.innerHTML = "";
+                card2.style.opacity = "0";
+                random[1] = null;
                 break;
-            case 2: btn3.classList.add("finish");
-                btn3.innerHTML = "";
+            case 2:
+                card3.classList.add("finish");
+                numberP3.classList.add("finish");
+                numberP3.innerHTML = "";
+                card3.style.opacity = "0";
+                random[2] = null;
                 break;
-            case 3: btn4.classList.add("finish");
-                btn4.innerHTML = "";
+            case 3:
+                card4.classList.add("finish");
+                numberP4.classList.add("finish");
+                numberP4.innerHTML = "";
+                card4.style.opacity = "0";
+                random[3] = null;
                 break;
-            case 4: btn5.classList.add("finish");
-                btn5.innerHTML = "";
+            case 4:
+                card5.classList.add("finish");
+                numberP5.classList.add("finish");
+                numberP5.innerHTML = "";
+                card5.style.opacity = "0";
+                random[4] = null;
                 break;
-            case 5: btn6.classList.add("finish");
-                btn6.innerHTML = "";
+            case 5:
+                card6.classList.add("finish");
+                numberP6.classList.add("finish");
+                numberP6.innerHTML = "";
+                card6.style.opacity = "0";
+                random[5] = null;
                 break;
-            case 6: btn7.classList.add("finish");
-                btn7.innerHTML = "";
+            case 6:
+                card7.classList.add("finish");
+                numberP7.classList.add("finish");
+                numberP7.innerHTML = "";
+                card7.style.opacity = "0";
+                random[6] = null;
                 break;
-            case 7: btn8.classList.add("finish");
-                btn8.innerHTML = "";
+            case 7:
+                card8.classList.add("finish");
+                numberP8.classList.add("finish");
+                numberP8.innerHTML = "";
+                card8.style.opacity = "0";
+                random[7] = null;
                 break;
         }
         switch (arrayNum2) {
-            case 0: btn1.classList.add("finish");
-                btn1.innerHTML = "";
+            case 0:
+                card1.classList.add("finish");
+                numberP1.classList.add("finish");
+                numberP1.innerHTML = "";
+                card1.style.opacity = "0";
+                random[0] = null;
                 break;
-            case 1: btn2.classList.add("finish");
-                btn2.innerHTML = "";
+            case 1:
+                card2.classList.add("finish");
+                numberP2.classList.add("finish");
+                numberP2.innerHTML = "";
+                card2.style.opacity = "0";
+                random[1] = null;
                 break;
-            case 2: btn3.classList.add("finish");
-                btn3.innerHTML = "";
+            case 2:
+                card3.classList.add("finish");
+                numberP3.classList.add("finish");
+                numberP3.innerHTML = "";
+                card3.style.opacity = "0";
+                random[2] = null;
                 break;
-            case 3: btn4.classList.add("finish");
-                btn4.innerHTML = "";
+            case 3:
+                card4.classList.add("finish");
+                numberP4.classList.add("finish");
+                numberP4.innerHTML = "";
+                card4.style.opacity = "0";
+                random[3] = null;
                 break;
-            case 4: btn5.classList.add("finish");
-                btn5.innerHTML = "";
+            case 4:
+                card5.classList.add("finish");
+                numberP5.classList.add("finish");
+                numberP5.innerHTML = "";
+                card5.style.opacity = "0";
+                random[4] = null;
                 break;
-            case 5: btn6.classList.add("finish");
-                btn6.innerHTML = "";
+            case 5:
+                card6.classList.add("finish");
+                numberP6.classList.add("finish");
+                numberP6.innerHTML = "";
+                card6.style.opacity = "0";
+                random[5] = null;
                 break;
-            case 6: btn7.classList.add("finish");
-                btn7.innerHTML = "";
+            case 6:
+                card7.classList.add("finish");
+                numberP7.classList.add("finish");
+                numberP7.innerHTML = "";
+                card7.style.opacity = "0";
+                random[6] = null;
                 break;
-            case 7: btn8.classList.add("finish");
-                btn8.innerHTML = "";
+            case 7:
+                card8.classList.add("finish");
+                numberP8.classList.add("finish");
+                numberP8.innerHTML = "";
+                card8.style.opacity = "0";
+                random[7] = null;
                 break;
+        }
+        if (turnCounter % 2 === 0) {
+            point2 += 1;
+            player2Point.textContent = `player2:${point2}`;
+            turnCounter -= 1;
+        } else {
+            point1 += 1;
+            player1Point.textContent = `player1:${point1}`;
+            turnCounter -= 1;
         }
     } else {
         switch (arrayNum1) {
             case 0:
-                btn1.classList.add("back");
-                btn1.innerHTML = "";
+                card1.classList.add("back");
+                numberP1.innerHTML = "";
                 break;
             case 1:
-                btn2.classList.add("back");
-                btn2.innerHTML = "";
+                card2.classList.add("back");
+                numberP2.innerHTML = "";
                 break;
             case 2:
-                btn3.classList.add("back");
-                btn3.innerHTML = "";
+                card3.classList.add("back");
+                numberP3.innerHTML = "";
                 break;
             case 3:
-                btn4.classList.add("back");
-                btn4.innerHTML = "";
+                card4.classList.add("back");
+                numberP4.innerHTML = "";
                 break;
             case 4:
-                btn5.classList.add("back");
-                btn5.innerHTML = "";
+                card5.classList.add("back");
+                numberP5.innerHTML = "";
                 break;
             case 5:
-                btn6.classList.add("back");
-                btn6.innerHTML = "";
+                card6.classList.add("back");
+                numberP6.innerHTML = "";
                 break;
             case 6:
-                btn7.classList.add("back");
-                btn7.innerHTML = "";
+                card7.classList.add("back");
+                numberP7.innerHTML = "";
                 break;
             case 7:
-                btn8.classList.add("back");
-                btn8.innerHTML = "";
+                card8.classList.add("back");
+                numberP8.innerHTML = "";
                 break;
         }
         switch (arrayNum2) {
             case 0:
-                btn1.classList.add("back");
-                btn1.innerHTML = "";
+                card1.classList.add("back");
+                numberP1.innerHTML = "";
                 break;
             case 1:
-                btn2.classList.add("back");
-                btn2.innerHTML = "";
+                card2.classList.add("back");
+                numberP2.innerHTML = "";
                 break;
             case 2:
-                btn3.classList.add("back");
-                btn3.innerHTML = "";
+                card3.classList.add("back");
+                numberP3.innerHTML = "";
                 break;
             case 3:
-                btn4.classList.add("back");
-                btn4.innerHTML = "";
+                card4.classList.add("back");
+                numberP4.innerHTML = "";
                 break;
             case 4:
-                btn5.classList.add("back");
-                btn5.innerHTML = "";
+                card5.classList.add("back");
+                numberP5.innerHTML = "";
                 break;
             case 5:
-                btn6.classList.add("back");
-                btn6.innerHTML = "";
+                card6.classList.add("back");
+                numberP6.innerHTML = "";
                 break;
             case 6:
-                btn7.classList.add("back");
-                btn7.innerHTML = "";
+                card7.classList.add("back");
+                numberP7.innerHTML = "";
                 break;
             case 7:
-                btn8.classList.add("back");
-                btn8.innerHTML = "";
+                card8.classList.add("back");
+                numberP8.innerHTML = "";
                 break;
         }
     }
     count = 0;
-    num1 = "";
-    num2 = "";
-    arrayNum1 = "";
-    arrayNun2 = "";
+    num1 = 0;
+    num2 = 0;
+    arrayNum1 = 0;
+    arrayNun2 = 0;
+    turnCounter += 1;
+    if (turnCounter % 2 !== 0) {
+        nextPlayer.innerHTML = "次はPlayer1の番です。"
+    } else {
+        nextPlayer.innerHTML = "次はPlayer2の番です。"
+    }
+    setTimeout
+    if ((point1 + point2) === 4) {
+        setTimeout(() => {
+            alert("終了です。");
+            location.reload();
+        }, 500);
+    }
 }

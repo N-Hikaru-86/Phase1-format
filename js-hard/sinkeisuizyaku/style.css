@@ -1,7 +1,15 @@
-#panel {
+h1 {
+  font-size: 20px;
+}
+
+panel {
   width: 310px;
   height: 340px;
   overflow: hidden;
+}
+.turn{
+  margin-left: 50px;
+  line-height: 1.4;
 }
 
 .card {
@@ -10,13 +18,16 @@
   line-height: 80px;
   border: 1px solid silver;
   border-radius: 10px;
-  text-align: center;
-  font-size: 26px;
-  font-weight: bold;
   box-shadow: gray 2px 2px;
   background: white;
   float: left;
   cursor: pointer;
+}
+
+.cardText{
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
 }
 /* 裏の状態 */
 .back {
@@ -28,3 +39,4 @@
   opacity: 0;
   cursor: default;
 }
+
